@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/tpTest"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="TP测试"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/keyTest"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="按键测试"
+            android:layout_toRightOf="@+id/tpTest"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/trumpetTest"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="免提喇叭测试"
+            android:layout_toRightOf="@+id/keyTest"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/simTest"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="SIM卡测试"
+            android:layout_toRightOf="@+id/trumpetTest"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/ledTest"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="LED灯测试"
+            android:layout_below="@+id/tpTest"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/cameraTest"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="摄像头测试"
+            android:layout_toRightOf="@+id/ledTest"
+            android:layout_alignTop="@+id/ledTest"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/wifiTest"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="wifi测试"
+            android:layout_toRightOf="@+id/cameraTest"
+            android:layout_alignTop="@+id/cameraTest"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/bluetoothTest"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="蓝牙测试"
+            android:layout_toRightOf="@+id/wifiTest"
+            android:layout_alignTop="@+id/wifiTest"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/recordingTest"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="录音测试"
+            android:layout_below="@+id/ledTest"
+            android:textSize="20dp"/>
+
+</RelativeLayout>
