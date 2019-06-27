@@ -78,4 +78,13 @@
             android:layout_below="@+id/ledTest"
             android:textSize="20dp"/>
 
+        <Button
+            android:id="@+id/screenTest"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:text="屏幕测试"
+            android:layout_toRightOf="@+id/recordingTest"
+            android:layout_alignTop="@+id/recordingTest"
+            android:textSize="20dp"/>
+
 </RelativeLayout>

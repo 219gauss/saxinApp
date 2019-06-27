@@ -29,6 +29,7 @@ public class s03Test extends AppCompatActivity {
     private Button keyTest;
     private Button tpTest;
     private Button recordingTest;
+    private Button screenTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,6 +127,15 @@ public class s03Test extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = getPackageManager().getLaunchIntentForPackage("com.android.soundrecorder");
+                startActivity(intent);
+            }
+        });
+
+        screenTest = (Button)findViewById(R.id.screenTest);
+        screenTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(s03Test.this,ScreenActivity.class);
                 startActivity(intent);
             }
         });
