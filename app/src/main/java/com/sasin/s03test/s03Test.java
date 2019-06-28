@@ -99,7 +99,8 @@ public class s03Test extends AppCompatActivity {
         simTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Settings.ACTION_DATA_ROAMING_SETTINGS);
+                Intent intent = new Intent("android.intent.action.MAIN");
+                intent.addCategory("android.intent.category.SimStatus");
                 startActivity(intent);
             }
         });
@@ -117,8 +118,9 @@ public class s03Test extends AppCompatActivity {
         tpTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(s03Test.this,TpActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(s03Test.this,TpActivity.class);
+//                startActivity(intent);
+
             }
         });
 
