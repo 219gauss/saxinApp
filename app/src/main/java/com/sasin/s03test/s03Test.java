@@ -118,9 +118,8 @@ public class s03Test extends AppCompatActivity {
         tpTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(s03Test.this,TpActivity.class);
-//                startActivity(intent);
-
+                Intent intent = new Intent(s03Test.this,TpActivity.class);
+                startActivity(intent);
             }
         });
 

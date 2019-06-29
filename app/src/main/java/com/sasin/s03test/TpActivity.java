@@ -1,5 +1,8 @@
 package com.sasin.s03test;
 
+import android.content.Intent;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,30 +13,21 @@ import android.widget.TextView;
 
 public class TpActivity extends AppCompatActivity {
 
-    private float x = 0f;
-    private float y = 0f;
-    private TextView tpX;
-    private TextView tpY;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tp);
 
-        tpX = (TextView) findViewById(R.id.tpX);
-        tpY = (TextView) findViewById(R.id.tpY);
-        tpX.setText(Float.toString(x));
-        tpY.setText(Float.toString(y));
+        Intent intent = new Intent("com.android.S03SystemTest.pointerLocation");
+        intent.putExtra("extra_data", "enable_PointerLocation");
+        sendBroadcast(intent);
     }
-
-
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        x = event.getX();
-        y = event.getY();
-        tpX.setText(Float.toString(x));
-        tpY.setText(Float.toString(y));
-        return super.onTouchEvent(event);
+    protected void onDestroy() {
+        super.onDestroy();
+        Intent intent = new Intent("com.android.S03SystemTest.pointerLocation");
+        intent.putExtra("extra_data", "disable_PointerLocation");
+        sendBroadcast(intent);
     }
-
 }
